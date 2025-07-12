@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Cream Heaven</title>
+    <link rel="icon" href="media/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="media/ice-cream.ong" alt="Colorful ice cream" class="header-img">
+        <h1> Welcome To Ice Cream Heaven!</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="flavours.html">Top Flovors</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>We Love Ice Cream!</h2>
+            <p>Ice cream makes everything better. Here are some fun facts:</p>
+            <ul class="fun-facts">
+                <li>The most popular flavor is vanilla</li>
+                <li>It takes about 50 licks to finsh a scoop</li>
+            </ul>
+        </section>
+
+        <div class="fun-box">
+            <button id="flavor-genarator">Genarate Random Flavor</button>
+            <p id="flavor-result">Click the button for a surprise!</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Ice Cream Lovers Club</p>
+        <p><A href="https://en.wikipedia.org/wiki/Ice_cream" target="_blank">Learn more about ice cream</a></p>
+    </footer>
+
+    <script>
+        const flavors = ["Rainbow Sprinkles", "Mint Chocolate Chip", "Cookie Dough", 
+                        "Strawberry Cheesecake", "Pistachio", "Rocky Road"];
+        
+        document.getElementById('flavor-generator').addEventListener('click', function() {
+            const randomFlavor = flavors[Math.floor(Math.random() * flavors.length)];
+            document.getElementById('flavor-result').textContent = `Try ${randomFlavor}!`;
+        });
+    </script>
+</body>
+</html>
